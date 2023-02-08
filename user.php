@@ -5,13 +5,13 @@
     </script>
 <div id="content">
 <table>
-        <th><a href="#" value="add">[+] Add User</a></th>
-        <th><a href="#" value="del">[-] Del User</a></th>
-        <th><a href="#" value="update">[*] Update</a></th>
+        <th><a href="user-action.php?c=add" value="add">[+] Add User</a></th>
+        <th><a href="user-action.php?c=delete" value="del">[-] Del User</a></th>
+        <th><a href="user-action.php?c=update" value="update">[*] Update</a></th>
     </table>
             <table id="data"> 
                 <thead>
-                <th><input type="checkbox" name="cek" id="cek"></th>
+                <th>No</th>
                 <th>Name</th>
                 <th>Class</th>
                 <th>Gender</th>
@@ -20,7 +20,9 @@
                 <th>Telephone</th>
                 <th>Username</th>
                 <th>Password</th>
-                <!-- <th>Action</th> -->
+                <th>Status</th>
+                <th>Role</th>
+                <th>Action</th>
                 </thead>
                 <tbody>
             <?php
@@ -31,18 +33,22 @@
    ($row=$res-> fetch_assoc()){
     echo"
                 <tr>
+                
                     <td>$no</td>
-                    <td>{$row['nama']}</td>
+                    <td>{$row['name']}</td>
+                    <td>{$row['class']}</td>
                     <td>{$row['gender']}</td>
+                    <td>{$row['id_religion']}</td>
                     <td>{$row['email']}</td>
-                    <td>{$row['nohp']}</td>
-                    <td>{$row['alamat']}</td>
+                    <td>{$row['telephone']}</td>
+                    <td>{$row['username']}</td>
                     <td>{$row['password']}</td>
-                    <td>{$row['aktif']}</td>
+                    <td>{$row['status']}</td>
+                    <td>{$row['id_role']}</td>
                     <td>
-                    <a>Edit</a>
-                    <a>Delete</a>
-                    <a>Nonaktifkan</a>
+                    <a href='action-edit.php?a='.$row['id_user']>Edit</a>
+                    <a href='action-del.php?a='.$row['id_user']>Delete</a>
+                    <a href='action-deact.php?a='.$row['id_user']>Deactivate</a>
                     </td>
 
                     

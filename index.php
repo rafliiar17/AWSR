@@ -19,15 +19,15 @@
                 <li><a class="linked" href="index.php?x=attendance">Attendance</a></li>
                 <li><a class="linked" href="index.php?x=log">View Attendance</a></li>
                 <li><a class="linked" href="index.php?x=user">User Data</a></li>
-                <li><a class="linked" href="#">Settings</a></li>
-                <li><a class="linked" href="#">Logout</a></li>
+                <li><a class="linked" href="index.php?x=setting">Settings</a></li>
+                <li><a class="linked" href="index.php?x=logout">Logout</a></li>
             </ul>
         </div>
 
         <div id="aside">
             <?php
                 if(!isset($_GET['x']))
-                include 'index.php';
+                include 'attendance.php';
                 elseif (isset($_GET['x']) && is_file($_GET['x'].'.php')) 
                     include $_GET['x'].'.php';
                 else

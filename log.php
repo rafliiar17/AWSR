@@ -14,173 +14,32 @@
                 <th>Date</th>
                 <th>Time In</th>
                 <th>Time Out</th>
+                <th>Status</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody><?php
+                include "config/connection.php";
+                    $no = 1;
+                    $res  = $conn-> query("SELECT
+                    b.name,
+                    a.*
+                FROM
+                    tb_attendance a
+                    JOIN tb_user b ON a.id_user = b.id_user");
+  while
+   ($row=$res-> fetch_assoc()){
+    echo "
             <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Rafli</td>
-                <td>2022-12-11</td>
-                <td>8.45</td>
-                <td>17.45</td>
-            </tr>
-            <tr>
-                <td>Naufal</td>
-                <td>2022-12-11</td>
-                <td>8.01</td>
-                <td>17.05</td>
-            </tr>
-            <tr>
-                <td>Surya</td>
-                <td>2022-12-11</td>
-                <td>8.15</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr> <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-             <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr> <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr> <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-             <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr> <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr> <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            <tr>
-                <td>Yasinta</td>
-                <td>2022-12-11</td>
-                <td>8.30</td>
-                <td>17.30</td>
-            </tr>
-            
+            <td>{$row['name']}</td>
+            <td>{$row['attendance_date']}</td>
+            <td>{$row['time_in']}</td>
+            <td>{$row['time_out']}</td>
+            <td>{$row['status']}</td>
+
+            </tr>";
+            $no++;
+   }
+   ?>
         </tbody>
     </table>
 </div>
