@@ -23,236 +23,33 @@
                 <!-- <th>Action</th> -->
                 </thead>
                 <tbody>
+            <?php
+                include "config/connection.php";
+                    $no = 1;
+                    $res  = $conn-> query("select * from tb_user");
+  while
+   ($row=$res-> fetch_assoc()){
+    echo"
                 <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Rafli</td>
-                    <td>XII - RPL</td>
-                    <td>Laki-Laki</td>
-                    <td>Islam</td>
-                    <td>rafli@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr><tr>
-                    <td><input type="checkbox" name="cek" id="cek"></td>
-                    <td>Yesyus</td>
-                    <td>XI - RPL</td>
-                    <td>Perempuan</td>
-                    <td>Kristen</td>
-                    <td>yesyus@v-tax.id</td>
-                    <td>083893614730</td>
-                    <td>rafliiarz</td>
-                    <td>*******</td>
-                </tr>
+                    <td>$no</td>
+                    <td>{$row['nama']}</td>
+                    <td>{$row['gender']}</td>
+                    <td>{$row['email']}</td>
+                    <td>{$row['nohp']}</td>
+                    <td>{$row['alamat']}</td>
+                    <td>{$row['password']}</td>
+                    <td>{$row['aktif']}</td>
+                    <td>
+                    <a>Edit</a>
+                    <a>Delete</a>
+                    <a>Nonaktifkan</a>
+                    </td>
+
+                    
+                </tr>";
+            $no++;
+            }
+?>
                 </tbody>
             </table>
 

@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/table.js"></script>
-    <script src="js/ajax.js"></script>
     <script src="js/moment.min.js"></script>
 	<script src="js/clock.js"></script>
 	<div class="clock" id="content">
