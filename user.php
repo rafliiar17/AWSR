@@ -5,15 +5,16 @@
     </script>
 <div id="content">
 <table>
-        <th><a href="user-action.php?c=add" value="add">[+] Add User</a></th>
-        <th><a href="user-action.php?c=delete" value="del">[-] Del User</a></th>
-        <th><a href="user-action.php?c=update" value="update">[*] Update</a></th>
+        <th><a href="index.php?x=add-user" value="add">[+] Add User</a></th>
+        <th><a href="index.php?x=delete-user" value="del">[-] Del User</a></th>
+        <th><a href="index.php?x=update-user" value="update">[*] Update</a></th>
     </table>
+
             <table id="data"> 
                 <thead>
                 <th>No</th>
                 <th>Name</th>
-                <th>Class</th>
+                <th>Department</th>
                 <th>Gender</th>
                 <th>Religion</th>
                 <th>Email</th>
@@ -46,9 +47,9 @@
                     <td>{$row['status']}</td>
                     <td>{$row['id_role']}</td>
                     <td>
-                    <a href='action-edit.php?a='.$row['id_user']>Edit</a>
-                    <a href='action-del.php?a='.$row['id_user']>Delete</a>
-                    <a href='action-deact.php?a='.$row['id_user']>Deactivate</a>
+                    <a href='action_edit.php?a=$row[id_user]'>Edit</a>
+                    <a href='action_del.php?a=$row[id_user]'>Delete</a>
+                    <a href='action_deact.php?a=$row[id_user]'>Deactivate</a>
                     </td>
 
                     
