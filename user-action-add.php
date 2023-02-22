@@ -2,7 +2,7 @@
 include 'config/connection.php';
 // $id_user = $_POST['id_user'];
 $name = $_POST['name'];
-$class = $_POST['class'];
+$department = $_POST['department'];
 $gender = $_POST['gender'];
 $id_religion = $_POST['id_religion'];
 $email = $_POST['email'];
@@ -12,7 +12,7 @@ $password = $_POST['password'];
 $status = $_POST['status'];
 $id_role = $_POST['id_role'];
 
-mysqli_query($conn, "INSERT INTO tb_user VALUES('','$name','$class','$gender','$id_religion','$email','$telephone','$username','$password','1','$id_role')");
+mysqli_query($conn, "INSERT INTO tb_user VALUES('','$name','$department','$gender','$id_religion','$email','$telephone','$username','$password',$status,'$id_role')");
  
 header("location:index.php?x=user");
 ?>

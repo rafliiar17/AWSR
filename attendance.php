@@ -41,4 +41,5 @@
 	var current_date = hari[date.getDay()]+", "+date.getDate()+" "+(bulan[date.getMonth()])+" "+ date.getFullYear();
 	document.getElementById("date").innerHTML = current_date;  
 </script>
-<input type="button" value="ATTENDANCE NOW!" id="btn-center">
+<!-- <input type="button" value="ATTENDANCE NOW!" id="btn-center"> -->
+<button type="button" class="btn btn-outline-secondary btn-lg" value="attendance">ATTENDANCE NOW</button>

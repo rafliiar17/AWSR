@@ -3,11 +3,12 @@
     $('#data').DataTable();
 } );
     </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <div id="content">
 <table>
-        <th><a href="index.php?x=add-user" value="add">[+] Add User</a></th>
-        <th><a href="index.php?x=delete-user" value="del">[-] Del User</a></th>
-        <th><a href="index.php?x=update-user" value="update">[*] Update</a></th>
+        <th><a href="index.php?x=add-user" value="add" class='btn'>[+] Add User</a></th>
+        <!-- <th><a href="index.php?x=update-user" value="del">[-] Del User</a></th> -->
+        <!-- <th><a href="index.php?x=update-user" value="update">[*] Update</a></th> -->
     </table>
 
             <table id="data"> 
@@ -29,7 +30,16 @@
             <?php
                 include "config/connection.php";
                     $no = 1;
-                    $res  = $conn-> query("select * from tb_user");
+                    $res  = $conn-> query("SELECT
+                    a.*,
+                    b.*,
+                    c.*,
+                    d.*
+                FROM
+                    tb_user a
+                    LEFT JOIN tb_department b ON a.department = b.id_department
+                    LEFT JOIN tb_religion c ON a.id_religion = c.id_religion
+                    left join tb_role d on a.id_role = d.id_role ");
   while
    ($row=$res-> fetch_assoc()){
     echo"
@@ -37,19 +47,19 @@
                 
                     <td>$no</td>
                     <td>{$row['name']}</td>
-                    <td>{$row['class']}</td>
+                    <td>{$row['name_department']}</td>
                     <td>{$row['gender']}</td>
-                    <td>{$row['id_religion']}</td>
+                    <td>{$row['religion_name']}</td>
                     <td>{$row['email']}</td>
                     <td>{$row['telephone']}</td>
                     <td>{$row['username']}</td>
                     <td>{$row['password']}</td>
                     <td>{$row['status']}</td>
-                    <td>{$row['id_role']}</td>
+                    <td>{$row['role_name']}</td>
                     <td>
-                    <a href='action_edit.php?a=$row[id_user]'>Edit</a>
-                    <a href='action_del.php?a=$row[id_user]'>Delete</a>
-                    <a href='action_deact.php?a=$row[id_user]'>Deactivate</a>
+                    <a href='edit-user.php?id=$row[id_user]'>Edit</a>
+                    <a href='del-user.php?id=$row[id_user]'>Delete</a>
+                    <a href='action-user.php?id=$row[id_user]'>Deactivate</a>
                     </td>
 
                     
