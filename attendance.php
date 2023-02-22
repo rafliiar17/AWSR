@@ -3,10 +3,11 @@
     <script src="js/table.js"></script>
     <script src="js/moment.min.js"></script>
 	<script src="js/clock.js"></script>
-	<div class="clock" id="content">
+	<div class="clock" margin=10px>
 
 	</div>
-
+  <div class="container bg-light" aria='hidden'>
+  <div class="col-md-12 text-center">
 	<p id="date"></p>
 <script>
     function clock() {// We create a new Date object and assign it to a variable called "time".
@@ -42,4 +43,8 @@
 	document.getElementById("date").innerHTML = current_date;  
 </script>
 <!-- <input type="button" value="ATTENDANCE NOW!" id="btn-center"> -->
-<a href="action_in.php" class="btn btn-primary btn-lg">ATTENDANCE NOW!</a>
+
+  <a href="action_in.php" class="btn btn-primary btn-lg"><i class="fa fa-sign-in-alt"></i> ATTENDANCE IN NOW!</a>
+  <a href="action_out.php" class="btn btn-danger btn-lg"><i class="fas fa-sign-out-alt"></i>ATTENDANCE OUT NOW!</a>
+  </div>
+</div>

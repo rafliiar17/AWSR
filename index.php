@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="css/datatable.css">
     <script src="js/datatable.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
     <div id="wrapper">
             <h2 align="center">AWS - Attendance Web System</h2>
-        <div id="navbar">
+        <div id="navbar" >
             <ul>
                 <!-- <li><a class="linked" href="#">Home</a></li> -->
                 <li><a class="linked" href="index.php?x=attendance">Attendance</a></li>

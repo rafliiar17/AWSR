@@ -3,7 +3,7 @@
 <head>
     <title>Add User & Record Attendance</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/c2559fa599.css">
 </head>
 <body>
     <div class="container mt-5">
@@ -73,7 +73,7 @@
                             
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Add User</button>
+                    <button type="submit" class="btn btn-primary"><i class='fas fa-home'>Add User</i></button>
                 </form>
             </div>
             

@@ -4,9 +4,10 @@
 } );
     </script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <div id="content">
 <table>
-        <th><a href="index.php?x=add-user" value="add" class='btn btn-primary btn-lg'>[+] Add User</a></th>
+        <th><a href="index.php?x=add-user" value="add" class='btn btn-primary btn-lg'><i class='fa fa-user'></i> Add User</a></th>
         <!-- <th><a href="index.php?x=update-user" value="del">[-] Del User</a></th> -->
         <!-- <th><a href="index.php?x=update-user" value="update">[*] Update</a></th> -->
     </table>
@@ -57,7 +58,7 @@
                     <td>{$row['status']}</td>
                     <td>{$row['role_name']}</td>
                     <td>
-                    <a href='edit-user.php?id=$row[id_user]' class='btn btn-secondary'>Edit</a>
+                    <a href='edit-user.php?id=$row[id_user]' class='btn btn-secondary'> Edit</a>
                     <a href='del-user.php?id=$row[id_user]'class='btn btn-primary'>Delete</a>
                     <a href='action-user.php?id=$row[id_user]'class='btn btn-warning'>Deactivate</a>
                     </td>

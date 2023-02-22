@@ -11,6 +11,7 @@
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Gender</th>
                 <th>Department</th>
                 <th>Date</th>
                 <th>Time In</th>
@@ -22,7 +23,7 @@
                 include "config/connection.php";
                     $no = 1;
                     $res  = $conn-> query("SELECT
-                    b.name,
+                    b.*,
                     a.*,
                     c.*
                 FROM
@@ -40,6 +41,7 @@
     echo "
             <tr>
             <td>{$row['name']}</td>
+            <td>{$row['gender']}</td>
             <td>{$row['name_department']}</td>
             <td>{$row['attendance_date']}</td>
             <td>{$row['time_in']}</td>
