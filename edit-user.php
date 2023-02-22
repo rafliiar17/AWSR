@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add User & Record Attendance</title>
+    <title>Edit User & Record Attendance</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-<?php 
-    include 'config/connection.php';
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-    $no = 1;
-    $query = mysqli_query($conn,"SELECT
+<?php
+include 'config/connection.php';
+$id = (int) $_GET['id'];
+$query = mysqli_query($conn, "SELECT
     a.*,
     b.*,
     c.*,
@@ -19,14 +17,14 @@
     tb_user a
     LEFT JOIN tb_department b ON a.department = b.id_department
     LEFT JOIN tb_religion c ON a.id_religion = c.id_religion
-    left join tb_role d on a.id_role = d.id_role");
-    while($row = mysqli_fetch_array($query)){
-?>
-
+    LEFT JOIN tb_role d ON a.id_role = d.id_role
+    WHERE a.id_user = '{$id}'");
+$row = mysqli_fetch_assoc($query);
+$no = 1; ?>
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="text-center">Add User</h1>
+                <h1 class="text-center">Edit User</h1>
                 <form method="POST" action="edit-action.php">
                     <div class="form-group">
                         <label for="name">Name:</label>
@@ -86,6 +84,6 @@
                     </select>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Add User</button>
+                    <button type="submit" class="btn btn-primary">Edit User</button>
                 </form>
-            </div> <?php }} ?>
+            </div>

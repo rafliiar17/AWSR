@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Add User & Record Attendance</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
     <div class="container mt-5">
@@ -75,27 +76,4 @@
                     <button type="submit" class="btn btn-primary">Add User</button>
                 </form>
             </div>
-            <div class="col-md-6">
-                <h1 class="text-center">Record Attendance</h1>
-                <form method="POST" action="process_attendance.php">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <select id="name" name="name" class="form-control" required>
-                            <option value="">Please select</option>
-                            <?php
-                            // Retrieve list of users from database
-                            $sql = "SELECT * FROM tb_user a join tb_attendance b on a.id_user = b.id_user";
-                            $result = mysqli_query($conn, $sql);
-
-                            // Loop through list and add to dropdown menu
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                echo '<option value="' . $row['name'] . '">' . $row['name'] . '</option>';
-                            }
-                            ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="status">Attendance Status:</label>
-                        <select id="status" name="status" class="form-control" required>
-                            <option value="">Please select</option>
-                            <option value="Present">Present</option>
+            

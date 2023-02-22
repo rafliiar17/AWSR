@@ -11,6 +11,7 @@
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Department</th>
                 <th>Date</th>
                 <th>Time In</th>
                 <th>Time Out</th>
@@ -22,15 +23,24 @@
                     $no = 1;
                     $res  = $conn-> query("SELECT
                     b.name,
-                    a.*
+                    a.*,
+                    c.*
                 FROM
                     tb_attendance a
-                    JOIN tb_user b ON a.id_user = b.id_user");
+                    JOIN tb_user b ON a.id_user = b.id_user
+                    LEFT JOIN tb_department c on b.department = c.id_department");
   while
-   ($row=$res-> fetch_assoc()){
+   ($row=$res-> fetch_assoc())
+    if($row['status']==0){
+        $status = 'Belum Absen';}
+        else {
+            $status = 'Sudah Absen';
+        
+    
     echo "
             <tr>
             <td>{$row['name']}</td>
+            <td>{$row['name_department']}</td>
             <td>{$row['attendance_date']}</td>
             <td>{$row['time_in']}</td>
             <td>{$row['time_out']}</td>

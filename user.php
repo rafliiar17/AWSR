@@ -3,10 +3,10 @@
     $('#data').DataTable();
 } );
     </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 <div id="content">
 <table>
-        <th><a href="index.php?x=add-user" value="add" class='btn'>[+] Add User</a></th>
+        <th><a href="index.php?x=add-user" value="add" class='btn btn-primary btn-lg'>[+] Add User</a></th>
         <!-- <th><a href="index.php?x=update-user" value="del">[-] Del User</a></th> -->
         <!-- <th><a href="index.php?x=update-user" value="update">[*] Update</a></th> -->
     </table>
@@ -57,9 +57,9 @@
                     <td>{$row['status']}</td>
                     <td>{$row['role_name']}</td>
                     <td>
-                    <a href='edit-user.php?id=$row[id_user]'>Edit</a>
-                    <a href='del-user.php?id=$row[id_user]'>Delete</a>
-                    <a href='action-user.php?id=$row[id_user]'>Deactivate</a>
+                    <a href='edit-user.php?id=$row[id_user]' class='btn btn-secondary'>Edit</a>
+                    <a href='del-user.php?id=$row[id_user]'class='btn btn-primary'>Delete</a>
+                    <a href='action-user.php?id=$row[id_user]'class='btn btn-warning'>Deactivate</a>
                     </td>
 
                     

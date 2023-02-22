@@ -42,4 +42,4 @@
 	document.getElementById("date").innerHTML = current_date;  
 </script>
 <!-- <input type="button" value="ATTENDANCE NOW!" id="btn-center"> -->
-<button type="button" class="btn btn-outline-secondary btn-lg" value="attendance">ATTENDANCE NOW</button>
+<a href="action_in.php" class="btn btn-primary btn-lg">ATTENDANCE NOW!</a>
