@@ -12,7 +12,8 @@ $password = $_POST['password'];
 $status = $_POST['status'];
 $id_role = $_POST['id_role'];
 
-mysqli_query($conn, "INSERT INTO tb_user VALUES('','$name','$department','$gender','$id_religion','$email','$telephone','$username','$password',$status,'$id_role')");
+mysqli_query($conn, "INSERT INTO tb_user VALUES
+('','$name','$department','$gender','$id_religion','$email','$telephone','$username','$password',$status,'$id_role')");
  
 header("location:index.php?x=user");
 ?>
