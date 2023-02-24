@@ -19,8 +19,8 @@
                         <label for="gender">Gender:</label>
                         <select id="gender" name="gender" class="form-control" required>
                             <option value="">Please select</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -35,8 +35,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                    <label for="department">Department:</label>
-                    <select id="department" name="department" class="form-control" required>
+                    <label for="id_department">Department:</label>
+                    <select id="id_department" name="id_department" class="form-control" required>
                             <option value="">Please select</option>
                             <option value="1">MBA</option>
                             <option value="2">RCS</option>
@@ -60,10 +60,10 @@
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" class="form-control" required>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="Status">Status:</label>
-                        <input type="text" id="status" name="status" class="form-control" readonly Value="1" required>
-                    </div>
+                        <input type="text" id="status" name="status" class="form-control" readonly Value="active" required> 
+                    </div> -->
                     <div class="form-group">
                     <label for="id_role">Role:</label>
                     <select id="id_role" name="id_role" class="form-control" required>
@@ -73,7 +73,7 @@
                             
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary"><i class='fas fa-home'>Add User</i></button>
+                    <button type="submit" class="btn btn-primary"><i class='fas fa-plus'> Add User</i></button>
                 </form>
             </div>
             

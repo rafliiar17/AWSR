@@ -1,8 +1,8 @@
 <?php
 include 'config/connection.php';
 
-if(isset($_GET['id'])) {
-    $id = $_GET['id'];
+if(isset($_GET['x'])) {
+    $id = $_GET['x'];
 
     $query = "DELETE FROM tb_user WHERE id_user = $id";
     $result = mysqli_query($conn, $query);

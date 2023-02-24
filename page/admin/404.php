@@ -1,0 +1,3 @@
+<?php
+    echo "HALAMAN YANG ANDA TUJU TIDAK ADA"
+?>

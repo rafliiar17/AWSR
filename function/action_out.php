@@ -1,7 +1,11 @@
 <?php
-include 'config/connection.php';
-
-$id = 1;
+include '../config/connection.php';
+ session_start();
+ if (!isset($_SESSION['id_user'])) {
+    echo "<script>alert('Please login first!');history.back();</script>";
+    exit;
+}
+$id = $_SESSION['id_user'];
 $date = date('Y-m-d');
 $time = date('H:i:s');
 $status = 1;
@@ -19,6 +23,6 @@ $res = $conn->query("UPDATE  tb_attendance set time_out = '$time', status='$stat
 if (mysqli_affected_rows($conn) > 0) {
     echo "<script>alert('Attendance recorded successfully!');history.back();</script>";
 } else {
-    echo "<script>alert('GAGAL ABSEN!');history.back();</script>";
+    echo "<script>alert('Attendance recorded Failed!');history.back();</script>";
 }
 ?>

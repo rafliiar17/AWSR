@@ -1,6 +1,6 @@
 <?php
 //koneksi ke database
-include 'config/connection.php';
+include '../config/connection.php';
 
 //mengambil nilai ID yang dikirim melalui parameter
 $id = $_GET['id'];
@@ -23,9 +23,9 @@ $update = mysqli_query($conn, "UPDATE tb_user SET status='$new_status' WHERE id_
 //menampilkan pesan berhasil atau gagal pada action
 if($update){
     echo "<script>alert('Status berhasil diubah!')</script>";
-    echo "<script>window.location.href='index.php?x=user'</script>";
+    echo "<script>window.location.href='../page/admin/index.php?x=user'</script>";
 }else{
     echo "<script>alert('Status gagal diubah!')</script>";
-    echo "<script>window.location.href='index.php?x=user'</script>";
+    echo "<script>window.location.href='../page/admin/index.php?x=user'</script>";
 }
 ?>
