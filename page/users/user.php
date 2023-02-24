@@ -62,7 +62,6 @@ include '../../config/connection.php';
                     <input type="password" class="form-control" id="password" name="password" value="<?php echo $row['password']; ?>">
                     
                     <div class="input-group-append">
-                    <span id="showPassword" onclick="togglePassword()">  <span class="input-group-text" id="show-password-toggle"><i class="fa fa-eye"></i></span></span>
                     
                     </div>
                   </div>
@@ -125,18 +124,6 @@ include '../../config/connection.php';
     </div>
   </div>
 <?php } ?>
-<script>
-  function togglePassword() {
-  var passwordInput = document.getElementById("password");
-  var showPasswordBtn = document.getElementById("showPassword");
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    showPasswordBtn.textContent = "hide";
-  } else {
-    passwordInput.type = "password";
-    showPasswordBtn.textContent = "show";
-  }
-}
 
 </script>
   <!-- Bootstrap JS -->
