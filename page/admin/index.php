@@ -23,8 +23,7 @@
     <!-- <i class="fas fa-home"> -->
             <h2 align="center"><i class="fas fa-home"></i> AWS - Attendance Web System</h2>
     <nav class="navbar sticky-top navbar-dark bg-dark justify-content-between">
-        <div></div>
-    <a class="navbar-brand" href="#">HOME</a>
+        <div></div><a class="navbar-brand"<?php if ($_GET['x'] == 'home') echo 'active'; ?>" href="index.php?x=home&&user-<?php echo $_SESSION['id_user']; ?>">HOME</a>
         <!-- <a class="navbar-brand"<?php if ($_GET['x'] == 'attendance') echo 'active'; ?>" href="index.php?x=attendance&&user-<?php echo $_SESSION['id_user']; ?>">Attendance</a> -->
         <a class="navbar-brand"<?php if ($_GET['x'] == 'log') echo 'active'; ?>" href="index.php?x=log&&user-<?php echo $_SESSION['id_user']; ?>">View User Attendance</a>
         <a class="navbar-brand"<?php if ($_GET['x'] == 'user') echo 'active'; ?>" href="index.php?x=user&&user-<?php echo $_SESSION['id_user']; ?>">Settings</a>

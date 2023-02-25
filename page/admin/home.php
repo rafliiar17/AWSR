@@ -3,35 +3,34 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Datang</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Attendance Web System</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-qY+0t0J2QjKvna+5bQrOJ/zgmBNRtJ5N5aZus+gRFwEs8O/IS3q80P7MAn9pSgGELfBGW3qDYAX7tzZ2w4u4Rw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      body {
-        background-color: #f8f9fa;
-      }
-      .jumbotron {
-        background-color: #ffffff;
-        margin-top: 50px;
-      }
-      .display-4 {
-        font-size: 3rem;
-      }
-      .lead {
-        font-size: 1.5rem;
-      }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
-      <div class="jumbotron text-center">
-        <h1 class="display-4">Selamat Datang di Halaman Saya</h1>
-        <p class="lead">SILAHKAN ABSENSI JIKA BELUM ABSEN</p>
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Welcome to Attendance Web System</h1>
+        <p class="lead">This is a simple web application to manage attendance records.</p>
+        <?php if(isset($_SESSION['username'])) { ?>
+          <p class="lead p-lg-5 fas fa-user"> You are currently logged in as <?php echo $_SESSION['username']; ?>.</p>
+        <?php } else { ?>
+          <p class="lead">Please login to access the system.</p>
+        <?php } ?>
       </div>
     </div>
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-4+1XJNziTHf7vM6U+QogiO9H6OY8/3bKV6luKw6p/5j5z5J05p5GmJN9S9ez+Y0Q2Gv+kkKzEnz+4j4nLfQ2PQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js" integrity="sha512-7VdSNMnsu2HcTlaPb8zMKe3sA1i/Pms/BBJXzYqhOj7NcN2QRYcT+f+c0jMst+ixjCJtALx9Cr0aRGFjKZpEag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-6zGn6LObP6oYU8gq3Zc/S1CwDrpMNKue5d5z5bssxjM5DRS9RE8mucYI+PWa87wAa4Phdm4RzN/6NvU6QgU+hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </body>
-</html>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+      <div class="container">
+        
+        <p class="m-0 text-center">&copy; Attendance Web System <?php echo date('Y'); ?></p>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper-base.min.js"></
