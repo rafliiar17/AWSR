@@ -8,7 +8,7 @@ if (!isset($_SESSION['id_user'])) {
     exit;
 }
 
-$id = $_SESSION['id_user'];
+$id = $_GET['id_user'];
 $query = mysqli_query($conn, "SELECT *
     FROM
     tb_user
