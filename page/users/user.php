@@ -59,8 +59,7 @@ include '../../config/connection.php';
               <div class="form-group">
                   <label for="password">Password:</label>
                   <div class="input-group">
-                    <input type="password" class="form-control" id="password" name="password" value="<?php echo $row['password']; ?>">
-                    
+                  <input type="password" class="form-control" id="password" name="password" value="<?php echo str_repeat("*", min(8, strlen($row['password']))); ?>">
                     <div class="input-group-append">
                     
                     </div>

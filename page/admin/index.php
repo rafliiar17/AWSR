@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
     <!-- <i class="fas fa-home"> -->
             <h2 align="center"><i class="fas fa-home"></i> AWS - Attendance Web System</h2>
     <nav class="navbar sticky-top navbar-dark bg-dark justify-content-between">
@@ -47,9 +47,8 @@
                 
             ?>
         </div>
-        <div id="footer">
-        &copy; 2022 Attendance Website By @rafliiarz
-        </div>
+
+        <footer class="bg-dark text-white text-center py-3"> &copy; 2022 Attendance Website By @rafliiarz</footer>
     </div>
     <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>

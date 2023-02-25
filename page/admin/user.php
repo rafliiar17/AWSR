@@ -66,13 +66,13 @@
                 <td>$email</td>
                 <td>$telephone</td>
                 <td>$username</td>
-                <td>$password</td>
+                <td>" . str_repeat("*", min(8, strlen($password))) . "</td>
                 <td>$status</td>
                 <td>$id_role</td>
                 <td>
-                    <a href='../../function/edit-user.php?id=$id_user' class='btn btn-secondary btn-sm'> Edit</a>
-                    <a href='../../function/del-user.php?id=$id_user' class='btn btn-primary btn-sm'>Delete</a>
-                    <a href='#' class='btn btn-$button_color btn-sm' onclick=\"location.href='../../function/action-user.php?id=$id_user&status=".($status == 'aktif' ? '0' : '1')."'\">$button_text</a>
+                    <a href='edit-user.php?x=$id_user' class='btn btn-secondary btn-sm'> Edit</a>
+                    <a href='del-user.php?x=$id_user' class='btn btn-primary btn-sm'>Delete</a>
+                    <a href='#' class='btn btn-$button_color btn-sm' onclick=\"location.href='../../function/action-user.php?x=$id_user&status=".($status == 'aktif' ? '0' : '1')."'\">$button_text</a>
                 </td>
             </tr>
         ";

@@ -35,7 +35,7 @@
       </li>
     </ul>
   </div> -->
-  <nav class="navbar fixed-top navbar-dark bg-dark justify-content-between">
+  <nav class="navbar navbar-dark bg-dark justify-content-between">
         <div></div>
         <a class="navbar-brand" href="#">HOME</a>
         <a class="navbar-brand"<?php if ($_GET['id'] == 'attendance') echo 'active'; ?>" href="index.php?id=attendance&&user-<?php echo $_SESSION['id_user']; ?>">Attendance</a>
@@ -52,7 +52,7 @@
         <div id="aside">
             <?php
                 if(!isset($_GET['id']))
-                include 'attendance.php';
+                include 'home.php';
                 elseif (isset($_GET['id']) && is_file($_GET['id'].'.php')) 
                     include $_GET['id'].'.php';
                 else
@@ -60,9 +60,7 @@
                 
             ?>
         </div>
-        <div id="footer">
-            &copy; 2022 Attendance Website By @rafliiarz
-        </div>  
+        <footer class="bg-dark text-white text-center py-3"> &copy; 2022 Attendance Website By @rafliiarz</footer>
     </div>
     <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>

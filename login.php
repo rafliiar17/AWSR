@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    
 </head>
 
 <body>
@@ -20,7 +22,7 @@
                 <div class="alert alert-danger"><?= $error_message("password salah bang") ?></div>
                 <?php endif; ?>
                 <div class="card">
-                    <div class="card-header text-center">Login Form</div>
+                    <div class="card-header text-center"> <i class="fa fa-user-graduate"></i> Welcome to Attendance Web System </div>
                     <div class="card-body">
                         <form action="function/process_login.php" method="POST">
                             <div class="form-group">
@@ -33,6 +35,12 @@
                                 <input type="password" name="password" id="password" class="form-control"
                                     placeholder="Enter password">
                             </div>
+                            <div class="card-footer text-center card-light">
+                               
+                                <a href="register.php" class="btn btn-link"> <i class="fas fa-user"></i> Register</a>
+                                <a href="forgot_password.php" class="btn btn-link">  Forgot Password <i class="fas fa-user-cog"></i></a>
+                            </div>
+
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
                         </form>
                     </div>

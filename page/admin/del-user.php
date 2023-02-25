@@ -1,5 +1,5 @@
 <?php
-include 'config/connection.php';
+include '../../config/connection.php';
 
 if(isset($_GET['x'])) {
     $id = $_GET['x'];

@@ -3,7 +3,7 @@
 include '../config/connection.php';
 
 //mengambil nilai ID yang dikirim melalui parameter
-$id = $_GET['id'];
+$id = $_GET['x'];
 
 //mengambil nilai status saat ini dari tabel tb_user berdasarkan ID
 $query = mysqli_query($conn, "SELECT status FROM tb_user WHERE id_user='$id'");

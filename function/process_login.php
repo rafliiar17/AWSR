@@ -22,9 +22,9 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         $_SESSION['username'] = $user['username'];
         $_SESSION['id_user'] = $user['id_user'];
         if($user['id_role'] == '0') {
-            header("Location: ../page/admin/index.php?x=user&id_user=".$user['id_user']);
+            header("Location: ../page/admin/index.php?x=home&userid=".$user['id_user']);
         } else {
-            header("Location: ../page/users/index.php?id=attendance&user_id=".$user['id_user']);
+            header("Location: ../page/users/index.php?id=home&userid=".$user['id_user']);
         }
         exit();
     } else{

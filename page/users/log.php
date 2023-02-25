@@ -47,7 +47,7 @@ $(document).ready(function() {
         <tbody>
             <?php
                 include "../../config/connection.php";
-                    $no = $_GET['id'];
+                    $id = $_SESSION['id_user'];
                     $res  = $conn-> query("SELECT
                     b.*,
                     a.*,
@@ -55,7 +55,9 @@ $(document).ready(function() {
                 FROM
                     tb_attendance a
                     JOIN tb_user b ON a.id_user = b.id_user
-                    LEFT JOIN tb_department c on b.id_department = c.id_department");
+                    LEFT JOIN tb_department c on b.id_department = c.id_department
+                    where a.id_user = '$id'
+                    ");
   while
    ($row=$res-> fetch_assoc())
     if($row['status']==0){
@@ -75,7 +77,7 @@ $(document).ready(function() {
             <td>" . ($row['status'] == '1' ? 'Attended' : 'Unattended') . "</td>
 
             </tr>";
-            $no++;
+            $id++;
    }
    ?>
         </tbody>
