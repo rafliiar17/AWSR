@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h1 class="text-center">Add User</h1>
-                <form method="POST" action="user-action-add.php">
+                <form method="POST" action="../../function/user-action-add.php">
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" class="form-control" required>
@@ -62,7 +62,7 @@
                     </div>
                     <!-- <div class="form-group">
                         <label for="Status">Status:</label>
-                        <input type="text" id="status" name="status" class="form-control" readonly Value="active" required> 
+                        <input type="text" id="status" name="status" class="form-control" readonly Value="1" required> 
                     </div> -->
                     <div class="form-group">
                     <label for="id_role">Role:</label>
