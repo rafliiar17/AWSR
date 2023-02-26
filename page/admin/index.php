@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION['id'] = 'id_user'; // contoh parameter yang disimpan di session
+    $_SESSION['x'] = 'id_user'; // contoh parameter yang disimpan di session
 ?>
 
 <!DOCTYPE html>

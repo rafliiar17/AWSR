@@ -37,7 +37,7 @@
   </div> -->
   <nav class="navbar navbar-dark bg-dark justify-content-between">
         <div></div>
-        <div></div><a class="navbar-brand"<?php if ($_GET['x'] == 'home') echo 'active'; ?>" href="index.php?id=home&&user-<?php echo $_SESSION['id_user']; ?>">HOME</a>
+        <div></div><a class="navbar-brand"<?php if ($_GET['id'] == 'home') echo 'active'; ?>" href="index.php?id=home&&user-<?php echo $_SESSION['id_user']; ?>">HOME</a>
         <a class="navbar-brand"<?php if ($_GET['id'] == 'attendance') echo 'active'; ?>" href="index.php?id=attendance&&user-<?php echo $_SESSION['id_user']; ?>">Attendance</a>
         <a class="navbar-brand"<?php if ($_GET['id'] == 'log') echo 'active'; ?>" href="index.php?id=log&&user-<?php echo $_SESSION['id_user']; ?>">View Attendance</a>
         <a class="navbar-brand"<?php if ($_GET['id'] == 'user') echo 'active'; ?>" href="index.php?id=user&&user-<?php echo $_SESSION['id_user']; ?>">Settings</a>

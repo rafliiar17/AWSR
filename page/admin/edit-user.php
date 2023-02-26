@@ -7,19 +7,23 @@
 <body>
 <?php
 include '../../config/connection.php';
-$id = (int) $_GET['x'];
+$id = (int) $_GET['e'];
 $query = mysqli_query($conn, "SELECT
     a.*
     FROM
     tb_user a
-    WHERE a.id_user = '{$id}'");
-$row = mysqli_fetch_assoc($query);
+    WHERE a.id_user = '$id'");
+$row = mysqli_fetch_assoc($query);{
 $no = 1; ?>
     <div class="container mt-5 col=12">
         <div class="row">
             <div class="col-md-6">
                 <h1 class="text-center">Edit User</h1>
-                <form method="POST" action="../../function/action_edit.php">
+                <form method="POST" action="../../function/action_edit.php?e=$id">
+                <div class="form-group">
+                        <label for="id_user">Id User:</label>
+                        <input type="text" id="id_user" name="id_user" class="form-control" readonly value="<?php echo $row['id_user'] ?>">
+                    </div>
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" class="form-control" value="<?php echo $row['name'] ?>">
@@ -69,7 +73,7 @@ $no = 1; ?>
                     <div class="form-group">
                     <label for="id_role">Role:</label>
                     <select id="id_role" name="id_role" class="form-control">
-                            <option value="0" <?php if($row['id_role'] == 1) echo 'selected' ?>>Admin</option>
+                            <option value="0" <?php if($row['id_role'] == 0) echo 'selected' ?>>Admin</option>
                             <option value="1" <?php if($row['id_role'] == 1) echo 'selected' ?>>Users</option>
                     </select>
                     </div>
@@ -83,3 +87,4 @@ $no = 1; ?>
                     <button type="submit" class="btn btn-primary">Edit User</button>
                 </form>
             </div>
+            <?php } ?>

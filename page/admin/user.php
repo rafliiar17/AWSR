@@ -70,7 +70,7 @@
                 <td>$status</td>
                 <td>$id_role</td>
                 <td>
-                    <a href='edit-user.php?x=$id_user' class='btn btn-secondary btn-sm'> Edit</a>
+                    <a href='edit-user.php?e=$id_user' class='btn btn-secondary btn-sm'> Edit</a>
                     <a href='del-user.php?x=$id_user' class='btn btn-primary btn-sm'>Delete</a>
                     <a href='#' class='btn btn-$button_color btn-sm' onclick=\"location.href='../../function/action-user.php?x=$id_user&status=".($status == 'aktif' ? '0' : '1')."'\">$button_text</a>
                 </td>
